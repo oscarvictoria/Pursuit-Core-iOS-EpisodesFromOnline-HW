@@ -47,9 +47,12 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "showCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "showCell", for: indexPath) as? ShowCell else {
+            fatalError("error")
+        }
         let someShow = theShow[indexPath.row]
-        cell.textLabel?.text = someShow.show?.name
+        cell.configured(for: someShow)
+        
         return cell
     }
 }
