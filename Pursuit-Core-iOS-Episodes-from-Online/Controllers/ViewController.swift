@@ -28,15 +28,28 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         searchBar.delegate = self
-        ShowsAPIClient.getShows(searchQuery: "") { (result) in
-            switch result {
-            case .failure(let appError):
-                print("error: \(appError)")
-            case .success(let show):
-                dump(show)
-            }
+//        ShowsAPIClient.getShows(searchQuery: "") { (result) in
+//            switch result {
+//            case .failure(let appError):
+//                print("error: \(appError)")
+//            case .success(let show):
+//                dump(show)
+//            }
+//        }
+//    }
+}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episodesVC = segue.destination as? EpisodeViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
         }
+        
+        let allEpisodes = theShow[indexPath.row]
+        episodesVC.theEpisodes = allEpisodes
     }
+    
+   
 
 
 }
@@ -52,25 +65,39 @@ extension ViewController: UITableViewDataSource {
         }
         let someShow = theShow[indexPath.row]
         cell.configured(for: someShow)
-        
         return cell
     }
+
 }
 
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+//        guard let searchText = searchBar.text else { return }
+//        ShowsAPIClient.getShows(searchQuery: searchText) { (result) in
+//            switch result {
+//            case .failure(let error):
+//                print("error: \(error)")
+//            case .success(let shows):
+//                DispatchQueue.main.async {
+//                    self.theShow = shows
+//                }
+//            }
+//        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let searchText = searchBar.text else { return }
-        ShowsAPIClient.getShows(searchQuery: searchText) { (result) in
-            switch result {
-            case .failure(let error):
-                print("error: \(error)")
-            case .success(let shows):
-                DispatchQueue.main.async {
-                    self.theShow = shows
-                }
-            }
-        }
+             ShowsAPIClient.getShows(searchQuery: searchText) { (result) in
+                 switch result {
+                 case .failure(let error):
+                     print("error: \(error)")
+                 case .success(let shows):
+                     DispatchQueue.main.async {
+                         self.theShow = shows
+                     }
+                 }
+             }
     }
     
 

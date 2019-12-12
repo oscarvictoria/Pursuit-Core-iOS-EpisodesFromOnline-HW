@@ -14,6 +14,8 @@
 		BEBF6F7623A050F100F37942 /* ShowsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7523A050F100F37942 /* ShowsAPIClient.swift */; };
 		BEBF6F7923A0539F00F37942 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7823A0539F00F37942 /* Shows.swift */; };
 		BEBF6F7B23A0593B00F37942 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7A23A0593B00F37942 /* Episodes.swift */; };
+		BEC69B5323A1BF3D0001C5A2 /* EpisodeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B5223A1BF3D0001C5A2 /* EpisodeAPIClient.swift */; };
+		BEC69B6723A2CB190001C5A2 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */; };
 		CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5B232178AF002D0255 /* AppDelegate.swift */; };
 		CD01CD5E232178AF002D0255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5D232178AF002D0255 /* ViewController.swift */; };
 		CD01CD61232178AF002D0255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD01CD5F232178AF002D0255 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		BEBF6F7523A050F100F37942 /* ShowsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsAPIClient.swift; sourceTree = "<group>"; };
 		BEBF6F7823A0539F00F37942 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		BEBF6F7A23A0593B00F37942 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
+		BEC69B5223A1BF3D0001C5A2 /* EpisodeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeAPIClient.swift; sourceTree = "<group>"; };
+		BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		CD01CD58232178AF002D0255 /* Pursuit-Core-iOS-Episodes-from-Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-Episodes-from-Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01CD5B232178AF002D0255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD01CD5D232178AF002D0255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				CD01CD5D232178AF002D0255 /* ViewController.swift */,
+				BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BEBF6F7523A050F100F37942 /* ShowsAPIClient.swift */,
+				BEC69B5223A1BF3D0001C5A2 /* EpisodeAPIClient.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -245,10 +251,12 @@
 				BEBF6F7323A04EDA00F37942 /* AppError.swift in Sources */,
 				BEBF6F7B23A0593B00F37942 /* Episodes.swift in Sources */,
 				BE56444523A0B602004B6279 /* ShowCell.swift in Sources */,
+				BEC69B5323A1BF3D0001C5A2 /* EpisodeAPIClient.swift in Sources */,
 				BEBF6F7623A050F100F37942 /* ShowsAPIClient.swift in Sources */,
 				CD01CD5E232178AF002D0255 /* ViewController.swift in Sources */,
 				BEBF6F7123A04C2D00F37942 /* NetworkHelper.swift in Sources */,
 				BE56444723A0B9C8004B6279 /* ImageClient.swift in Sources */,
+				BEC69B6723A2CB190001C5A2 /* EpisodeViewController.swift in Sources */,
 				BEBF6F7923A0539F00F37942 /* Shows.swift in Sources */,
 				CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */,
 			);

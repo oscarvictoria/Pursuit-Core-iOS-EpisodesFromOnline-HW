@@ -18,7 +18,7 @@ class ShowCell: UITableViewCell {
     func configured(for show: Shows) {
         titleCell.text = "Title - \(show.show?.name ?? "")"
         ratingCell.text = "Rating \(show.show?.rating?.average?.description ?? "")"
-        ImageClient.fetchImage(for: show.show?.image.original ?? "") { (result) in
+        ImageClient.fetchImage(for: show.show?.image?.medium ?? "") { (result) in
             switch result {
             case .failure(let error):
                 print("error: \(error)")

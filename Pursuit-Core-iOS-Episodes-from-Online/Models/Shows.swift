@@ -16,7 +16,7 @@ struct Show: Decodable {
     let id: Int
     let name: String
     let rating: Rating?
-    let image: theImage
+    let image: theImage?
 }
 struct theImage: Decodable {
     let medium: String
