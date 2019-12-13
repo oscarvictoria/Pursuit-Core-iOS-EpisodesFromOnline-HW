@@ -48,6 +48,15 @@ class EpisodeViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episodeDVC = segue.destination as? EpisodeDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
+        }
+        let programs = episodes[indexPath.row]
+        episodeDVC.episodeDetailVC = programs
+    }
 
     
 }

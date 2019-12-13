@@ -14,6 +14,7 @@
 		BEBF6F7623A050F100F37942 /* ShowsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7523A050F100F37942 /* ShowsAPIClient.swift */; };
 		BEBF6F7923A0539F00F37942 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7823A0539F00F37942 /* Shows.swift */; };
 		BEBF6F7B23A0593B00F37942 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF6F7A23A0593B00F37942 /* Episodes.swift */; };
+		BEC2293C23A44AB6001859FD /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2293B23A44AB6001859FD /* EpisodeDetailViewController.swift */; };
 		BEC69B5323A1BF3D0001C5A2 /* EpisodeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B5223A1BF3D0001C5A2 /* EpisodeAPIClient.swift */; };
 		BEC69B6723A2CB190001C5A2 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */; };
 		BEC69B6B23A4418D0001C5A2 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6A23A4418D0001C5A2 /* EpisodeCell.swift */; };
@@ -43,6 +44,7 @@
 		BEBF6F7523A050F100F37942 /* ShowsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsAPIClient.swift; sourceTree = "<group>"; };
 		BEBF6F7823A0539F00F37942 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		BEBF6F7A23A0593B00F37942 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
+		BEC2293B23A44AB6001859FD /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		BEC69B5223A1BF3D0001C5A2 /* EpisodeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeAPIClient.swift; sourceTree = "<group>"; };
 		BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		BEC69B6A23A4418D0001C5A2 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				CD01CD5D232178AF002D0255 /* ViewController.swift */,
 				BEC69B6623A2CB190001C5A2 /* EpisodeViewController.swift */,
+				BEC2293B23A44AB6001859FD /* EpisodeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEBF6F7323A04EDA00F37942 /* AppError.swift in Sources */,
+				BEC2293C23A44AB6001859FD /* EpisodeDetailViewController.swift in Sources */,
 				BEBF6F7B23A0593B00F37942 /* Episodes.swift in Sources */,
 				BE56444523A0B602004B6279 /* ShowCell.swift in Sources */,
 				BEC69B5323A1BF3D0001C5A2 /* EpisodeAPIClient.swift in Sources */,

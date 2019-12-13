@@ -11,8 +11,9 @@ import Foundation
 struct Episodes: Decodable {
     let name: String
     let season: Int
-//    let airdate: String
+    let number: Int
     let image: Image?
+    let summary: String?
 }
 
 struct Image: Decodable {
