@@ -29,6 +29,7 @@ class EpisodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         updateUI()
     }
     
@@ -57,11 +58,18 @@ extension EpisodeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath) as? EpisodeCell else {
+            fatalError("error")
+        }
         let someEpisodes = episodes[indexPath.row]
-        cell.textLabel?.text = someEpisodes.name
-        print(episodes.count)
+        cell.updateCell(for: someEpisodes)
+        
         return cell
     }
 }
 
+extension EpisodeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+}
